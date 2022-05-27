@@ -1,10 +1,6 @@
 package com.example.digitalbanking.services;
 
 import com.example.digitalbanking.dtos.*;
-import com.example.digitalbanking.entities.BankAccount;
-import com.example.digitalbanking.entities.CurrentAccount;
-import com.example.digitalbanking.entities.Customer;
-import com.example.digitalbanking.entities.SavingAccount;
 import com.example.digitalbanking.exception.BalanceNotSufficientException;
 import com.example.digitalbanking.exception.BankAccountNotFoundException;
 import com.example.digitalbanking.exception.CustomerNotFoundException;
