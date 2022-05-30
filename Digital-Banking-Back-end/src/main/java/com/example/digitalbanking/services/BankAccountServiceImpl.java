@@ -77,7 +77,7 @@ public class BankAccountServiceImpl implements BankAccountService{
     public List<CustomerDTO> listCustomer() {
         List<Customer> customers=customerRepository.findAll();
         List<CustomerDTO> collect=customers.stream()
-                .map(cust->dtoMapper.fromCustomer(cust))
+                .map(customer->dtoMapper.fromCustomer(customer))
                 .collect(Collectors.toList());
         return collect;
     }
@@ -187,6 +187,7 @@ public class BankAccountServiceImpl implements BankAccountService{
         accountHistoryDTO.setBalance(bankAccount.getBalance());
         accountHistoryDTO.setCurrentPage(page);
         accountHistoryDTO.setPageSize(size);
+        accountHistoryDTO.setTotalPages(accountOperations.getTotalPages());
         return accountHistoryDTO;
     }
 
